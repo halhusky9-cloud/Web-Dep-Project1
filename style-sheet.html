@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink-1: #ff8ec7;
+            --pink-2: #ff5ca8;
+            --pink-3: #ff2f95;
+            --light-text: #3c1d3f;
+            --soft-card: rgba(255, 255, 255, 0.14);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 32px 20px 70px;
+            font-family: "Quicksand", sans-serif;
+            color: var(--light-text);
+            text-align: center;
+            background:
+                radial-gradient(circle at 15% 10%, #ffd5ea 0%, transparent 40%),
+                radial-gradient(circle at 90% 20%, #ff90c8 0%, transparent 35%),
+                linear-gradient(135deg, var(--pink-1), var(--pink-2), var(--pink-3));
+        }
+
+        h1, h2 {
+            margin-bottom: 8px;
+            font-family: "Pacifico", cursive;
+            letter-spacing: 0.5px;
+        }
+
+        p, li, a {
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--light-text);
+            font-weight: 700;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 3px;
+        }
+
+        .intro-message,
+        .content-card {
+            max-width: 760px;
+            margin: 18px auto 12px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 18px;
+            padding: 16px 18px;
+            box-shadow: 0 12px 30px rgba(124, 0, 67, 0.28);
+            text-align: left;
+        }
+
+        .site-tabs {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .menu-toggle {
+            position: relative;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .menu-toggle summary {
+            list-style: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.24);
+            color: var(--light-text);
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .menu-toggle summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .menu-links {
+            position: absolute;
+            top: 58px;
+            right: 0;
+            min-width: 270px;
+            background: rgba(255, 255, 255, 0.26);
+            border: 1px solid rgba(255, 255, 255, 0.48);
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 12px 24px rgba(90, 17, 61, 0.22);
+            z-index: 20;
+        }
+
+        .menu-links a {
+            display: block;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 10px;
+        }
+
+        .menu-links a:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .menu-toggle[open] summary {
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .menu-toggle[open] .menu-links {
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+        }
+
+        .content-card h2 {
+            margin-top: 20px;
+            font-size: 1.4rem;
+        }
+
+        .content-card p {
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+    </style>
+</head>
+<body>
+    <nav class="site-tabs">
+        <details class="menu-toggle">
+            <summary aria-label="Open site navigation menu">☰</summary>
+            <div class="menu-links">
+                <a href="../index.html">Home</a>
+                <a href="../Html/gym-excercises.html">Gym Excercises</a>
+                <a href="../Html/yoga.html">Yoga</a>
+                <a href="../Html/pilates.html">Pilates</a>
+                <a href="../Html/cute-fits.html">Cute Fits</a>
+                <a href="../Html/gym-workout-performance.html">Gym Workout Performance</a>
+                <a href="../Html/abs.html">ABS</a>
+                <a href="style-sheet.html">Style Sheet</a>
+            </div>
+        </details>
+    </nav>
+
+    <h1 id="top">Style Sheet</h1>
+    <div class="intro-message">
+        <p>Here are the main design choices used for this website’s look and feel.</p>
+    </div>
+
+    <div class="content-card">
+        <h2>1. Overall Page Style</h2>
+        <p>The body of the website uses a soft background color to keep the page easy on the eyes. A sans-serif font is used for most text to improve readability. The default text color is a dark gray instead of pure black to create a softer look.</p>
+
+        <h2>2. Header Section</h2>
+        <p>The header is styled with a bright accent color to make it stand out at the top of the page. The text is centered and uses a different font family (serif) to create contrast from the rest of the page. Padding is added to create space and make the section feel more open.</p>
+
+        <h2>3. Main Content Section</h2>
+        <p>The main content is placed inside a styled container (div) with a white background. This helps separate the content from the page background. It includes padding for spacing and rounded corners to give the design a modern feel.</p>
+
+        <h2>4. Footer Section</h2>
+        <p>The footer uses a dark background color with light text to clearly separate it from the rest of the page. The text is centered and spaced evenly using padding.</p>
+
+        <h2>5. Text Highlighting</h2>
+        <p>A highlight style is used to emphasize important words or phrases. This style changes the font color and makes the text bold to draw attention.</p>
+
+        <h2>6. Layout Structure (Div Usage)</h2>
+        <p>The page is organized into three main sections using divs:</p>
+        <ul>
+            <li>A header div for the title and introduction</li>
+            <li>A main content div for information and sections</li>
+            <li>A footer div for closing information</li>
+        </ul>
+    </div>
+
+    <p><a href="../index.html">Back to Home</a></p>
+</body>
+</html>
